@@ -1,0 +1,20 @@
+name: Ruby Demo
+url: https://github.com/andremedeiros/ruby-demo
+deps:
+  - postgresql: 12.3
+  - redis: 6.0.4
+  - ruby: 2.7.1
+environment:
+  GOOGLE_SIGN_IN_CLIENT_ID: ""      # Set both of these from .env
+  GOOGLE_SIGN_IN_CLIENT_SECRET: ""
+tasks:
+  setup:
+    description: Fetches dependencies
+    command: |
+      bundle check || bundle install
+  test:
+    description: Runs the test suite
+    command: rake test
+  console:
+    description: Starts a Rails console
+    command: pry
