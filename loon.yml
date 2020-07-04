@@ -1,7 +1,6 @@
 name: Ruby Demo
 url: https://github.com/andremedeiros/ruby-demo
 deps:
-  - postgresql: 12.3
   - redis: 6.0.4
   - ruby: 2.7.1
 environment:
